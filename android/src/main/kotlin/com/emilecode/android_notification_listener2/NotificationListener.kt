@@ -26,8 +26,8 @@ class NotificationListener : NotificationListenerService() {
           val packageMessage = extras?.getCharSequence(Notification.EXTRA_TEXT).toString()
           val packageText = extras?.getCharSequence("android.title").toString()
           val packageExtra = convertBumbleToJsonString(sbn.notification.extras)
-          
-          val category = "no-category-notification"
+
+          var category = "no-category-notification"
           if(sbn.notification.category != "null")
           {
               category = sbn.notification.category
