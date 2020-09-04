@@ -26,12 +26,14 @@ class NotificationListener : NotificationListenerService() {
           val packageMessage = extras?.getCharSequence(Notification.EXTRA_TEXT).toString()
           val packageText = extras?.getCharSequence("android.title").toString()
           val packageExtra = convertBumbleToJsonString(sbn.notification.extras)
+          val category = sbn.notification.category
           // Pass data from one activity to another.
           val intent = Intent(NOTIFICATION_INTENT)
           intent.putExtra(NOTIFICATION_PACKAGE_NAME, packageName)
           intent.putExtra(NOTIFICATION_PACKAGE_MESSAGE, packageMessage)
           intent.putExtra(NOTIFICATION_PACKAGE_TEXT, packageText)
           intent.putExtra(NOTIFICATION_PACKAGE_EXTRA, packageExtra)
+          intent.putExtra(NOTIFICATION_PACKAGE_CATEGORY,category)
           sendBroadcast(intent) 
       }
       catch (error :Exception ){
@@ -45,6 +47,7 @@ class NotificationListener : NotificationListenerService() {
         const val NOTIFICATION_PACKAGE_MESSAGE = "package_message"
         const val NOTIFICATION_PACKAGE_TEXT = "package_text";
         const val NOTIFICATION_PACKAGE_EXTRA = "package_extra";
+        const val NOTIFICATION_PACKAGE_CATEGORY = "category";
     }
 
     private fun convertBumbleToJsonString(extra: Bundle): String {

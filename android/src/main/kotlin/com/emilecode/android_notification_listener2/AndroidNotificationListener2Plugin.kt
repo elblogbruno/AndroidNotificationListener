@@ -69,11 +69,13 @@ class AndroidNotificationListener2Plugin private constructor(private val context
       val packageMessage = intent.getStringExtra(NotificationListener.NOTIFICATION_PACKAGE_MESSAGE)
       val packageText = intent.getStringExtra(NotificationListener.NOTIFICATION_PACKAGE_TEXT)
       val packageExtra = intent.getStringExtra(NotificationListener.NOTIFICATION_PACKAGE_EXTRA)
+      val category = intent.getStringExtra(NotificationListener.NOTIFICATION_PACKAGE_CATEGORY)
       val map = HashMap<String, Any>()
       map["packageName"] = packageName
       map["packageMessage"] = packageMessage
       map["packageText"] = packageText
       map["packageExtra"] =packageExtra
+      map["category"]= category
       eventSink?.success(map)
     }
   }

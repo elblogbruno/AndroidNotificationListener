@@ -20,9 +20,10 @@ class NotificationEventV2 {
   String packageName;
   String packageExtra;
   String packageText;
+  String category;
   DateTime timeStamp;
 
-  NotificationEventV2({this.packageName, this.packageMessage, this.timeStamp , this.packageExtra , this.packageText});
+  NotificationEventV2({this.packageName, this.packageMessage, this.timeStamp , this.packageExtra , this.packageText,this.category});
 
   factory NotificationEventV2.fromMap(Map<dynamic, dynamic> map) {
     DateTime time = DateTime.now();
@@ -30,8 +31,8 @@ class NotificationEventV2 {
     String message = map['packageMessage'];
     String text = map['packageText'];
     String extra =  map['packageExtra'];
-
-    return NotificationEventV2(packageName: name, packageMessage: message, timeStamp: time,packageText: text , packageExtra: extra);
+    String category = map['category'];
+    return NotificationEventV2(packageName: name, packageMessage: message, timeStamp: time,packageText: text , packageExtra: extra,category: category);
   }
 
   @override
