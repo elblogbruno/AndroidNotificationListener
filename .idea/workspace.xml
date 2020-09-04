@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6337b2-b2e2-4b1e-8972-81b0ff204c31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/android_notification_listener2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/android_notification_listener2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +14,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-336" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
   </component>
   <component name="ProjectId" id="1h2rbsIW60CrsA2K8eaKjlQBG9U" />
   <component name="ProjectViewState">
@@ -56,5 +50,9 @@
       <screen x="68" y="0" width="1852" height="1080" />
     </state>
     <state x="495" y="186" key="SettingsEditor/68.0.1852.1080/1920.0.1920.1080/913.-900.1440.900@68.0.1852.1080" timestamp="1599220158623" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1599225695485">
+      <screen x="68" y="0" width="1852" height="1080" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/68.0.1852.1080/1920.0.1920.1080/913.-900.1440.900@68.0.1852.1080" timestamp="1599225695485" />
   </component>
 </project>

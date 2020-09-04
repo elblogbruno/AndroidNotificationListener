@@ -26,7 +26,12 @@ class NotificationListener : NotificationListenerService() {
           val packageMessage = extras?.getCharSequence(Notification.EXTRA_TEXT).toString()
           val packageText = extras?.getCharSequence("android.title").toString()
           val packageExtra = convertBumbleToJsonString(sbn.notification.extras)
-          val category = sbn.notification.category
+          
+          val category = "no-category-notification"
+          if(sbn.notification.category != "null")
+          {
+              category = sbn.notification.category
+          }
           // Pass data from one activity to another.
           val intent = Intent(NOTIFICATION_INTENT)
           intent.putExtra(NOTIFICATION_PACKAGE_NAME, packageName)
